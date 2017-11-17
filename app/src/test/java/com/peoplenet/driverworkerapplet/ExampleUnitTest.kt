@@ -11,7 +11,12 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun increment_isCorrect() {
+        val m = Model()
+        val a = m.counter
+        val b = m.incrementCounter()
+        val c = m.counter
+        assertEquals(a+1, b)
+        assertEquals(a+1, c)
     }
 }
